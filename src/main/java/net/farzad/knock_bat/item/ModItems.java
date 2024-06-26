@@ -13,8 +13,8 @@ import net.minecraft.util.registry.Registry;
 public class ModItems {
 
     public static final Item BATT = RegisterItem("batt",
-            new BattItem(ToolMaterials.WOOD,-3
-                    ,9,new FabricItemSettings().group(ItemGroup.COMBAT)));
+            new BattItem(ToolMaterials.WOOD,0.9f
+                    ,7,new FabricItemSettings().group(ItemGroup.COMBAT)));
     public static final Item[] bigItems = {BATT};
     //bigitems is just a list name and is used to change the items model in inventory
     // but doss not change its size handheld that is done in its json file.

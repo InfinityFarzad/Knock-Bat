@@ -7,16 +7,17 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
 
-public class BattItem extends SwordItem {
+public class BattItem extends AxeItem {
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public BattItem(ToolMaterial material, int attackSpeed, int attackDamage, Settings settings) {
+    public BattItem(ToolMaterial material, float attackSpeed, float attackDamage, Settings settings) {
         super(material, attackSpeed, attackDamage, settings);
         this.attackDamage = attackDamage;
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
