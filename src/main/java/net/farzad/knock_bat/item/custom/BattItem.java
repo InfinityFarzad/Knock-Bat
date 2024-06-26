@@ -17,7 +17,7 @@ public class BattItem extends AxeItem {
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public BattItem(ToolMaterial material, float attackSpeed, float attackDamage, Settings settings) {
+    public BattItem(ToolMaterial material, int attackSpeed, float attackDamage, Settings settings) {
         super(material, attackSpeed, attackDamage, settings);
         this.attackDamage = attackDamage;
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
